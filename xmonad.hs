@@ -18,11 +18,13 @@ internet = "chromium-browser"
 emacs = "emacs"
 goToSleep = ""
 lockScreen = "gnome-screensaver-command -l"
+music = "spotify"
 
 extraKeys =
   [ ("M-i", spawn internet)
   , ("M-e", spawn emacs)
   , ("M-s", spawn goToSleep)
   , ("M-l", spawn lockScreen)
+  , ("M-m", spawn music)
   ]
 
