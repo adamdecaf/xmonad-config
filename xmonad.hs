@@ -11,9 +11,15 @@ import Data.Monoid
 main = xmonad $ defaultConfig
   { borderWidth = 1,
     normalBorderColor = "#000000",
-    focusedBorderColor = "#FFFFFF"
+    focusedBorderColor = "#FFFFFF",
+    workspaces = allWorkspaces,
+    manageHook = manageSpawn <+> manageHook defaultConfig,
+    startupHook = onStartHook
   } `additionalKeysP` extraKeys
 
+allWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+myTerminal = "gnome-terminal"
 internet = "chromium-browser"
 secondaryBrowser = "firefox"
 emacs = "emacs"
@@ -21,6 +27,13 @@ goToSleep = ""
 lockScreen = "gnome-screensaver-command -l"
 music = "spotify"
 keepass = "keepassx"
+
+onStartHook = setWMName "LG3D"
+              >> spawnHere "gnome-settings-daemon"
+              >> spawnOn "2" internet
+              >> spawnOn "3" emacs
+              >> spawnOn "4" myTerminal
+              >> spawnOn "5" music
 
 extraKeys =
   [ ("M-i", spawn internet)
