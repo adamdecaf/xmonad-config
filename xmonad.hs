@@ -30,10 +30,10 @@ keepass = "keepassx"
 
 onStartHook = setWMName "LG3D"
               >> spawnHere "gnome-settings-daemon"
-              >> spawnOn "2" internet
-              >> spawnOn "3" emacs
-              >> spawnOn "4" myTerminal
               >> spawnOn "5" music
+              >> spawnOn "4" myTerminal
+              >> spawnOn "3" emacs
+              >> spawnOn "2" internet
 
 extraKeys =
   [ ("M-i", spawn internet)
