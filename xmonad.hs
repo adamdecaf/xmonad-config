@@ -27,6 +27,7 @@ goToSleep = ""
 lockScreen = "gnome-screensaver-command -l"
 music = "spotify"
 keepass = "keepassx"
+chat = "xchat"
 
 onStartHook = setWMName "LG3D"
               >> spawnHere "gnome-settings-daemon"
@@ -43,5 +44,5 @@ extraKeys =
   , ("M-l", spawn lockScreen)
   , ("M-m", spawn music)
   , ("M-k", spawn keepass)
+  , ("M-c", spawn chat)
   ]
-
