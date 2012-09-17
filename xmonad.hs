@@ -30,6 +30,7 @@ chat = "xchat"
 
 onStartHook = setWMName "LG3D"
               >> spawnHere "gnome-settings-daemon"
+              >> spawnOn "9" chat
               >> spawnOn "5" music
               >> spawnOn "4" myTerminal
               >> spawnOn "3" emacs
