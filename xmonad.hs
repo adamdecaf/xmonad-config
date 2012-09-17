@@ -27,6 +27,7 @@ lockScreen = "gnome-screensaver-command -l"
 music = "spotify"
 keepass = "keepassx"
 chat = "xchat"
+postgresSqlClient = "pgadmin3"
 
 onStartHook = setWMName "LG3D"
               >> spawnHere "gnome-settings-daemon"
@@ -45,4 +46,5 @@ extraKeys =
   , ("M-m", spawn music)
   , ("M-k", spawn keepass)
   , ("M-c", spawn chat)
+  , ("M-p", spawn postgresSqlClient)
   ]
