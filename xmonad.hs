@@ -5,7 +5,6 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.SpawnOn
 import XMonad.Hooks.SetWMName
-import XMonad.Config.Gnome
 import Data.Monoid
 
 main = xmonad $ defaultConfig
@@ -20,7 +19,7 @@ main = xmonad $ defaultConfig
 allWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 myTerminal = "gnome-terminal"
-internet = "chromium-browser"
+internet = "google-chrome"
 secondaryBrowser = "firefox"
 emacs = "emacs"
 goToSleep = ""
