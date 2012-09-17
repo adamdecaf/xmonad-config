@@ -46,5 +46,5 @@ extraKeys =
   , ("M-m", spawn music)
   , ("M-k", spawn keepass)
   , ("M-c", spawn chat)
-  , ("M-p", spawn postgresSqlClient)
+  , ("M-p-s", spawn postgresSqlClient)
   ]
