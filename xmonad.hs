@@ -11,6 +11,7 @@ main = xmonad $ defaultConfig
   { borderWidth = 1,
     normalBorderColor = "#000000",
     focusedBorderColor = "#FFFFFF",
+    modMask            = mod4Mask, -- masks left-alt to super for xmonad bindings
     workspaces = allWorkspaces,
     manageHook = manageSpawn <+> manageHook defaultConfig,
     startupHook = onStartHook
@@ -30,12 +31,12 @@ chat = "xchat"
 postgresSqlClient = "pgadmin3"
 
 onStartHook = setWMName "LG3D"
-              >> spawnHere "gnome-settings-daemon"
               >> spawnOn "9" chat
-              >> spawnOn "5" music
               >> spawnOn "4" myTerminal
               >> spawnOn "3" emacs
               >> spawnOn "2" internet
+              >> spawnOn "1" music
+              >> spawnHere "$HOME/xmonad-config/keymappings.sh"
 
 extraKeys =
   [ ("M-i", spawn internet)
