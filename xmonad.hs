@@ -27,16 +27,14 @@ goToSleep = ""
 lockScreen = "gnome-screensaver-command -l"
 music = "spotify"
 keepass = "keepassx"
-chat = "xchat"
 postgresSqlClient = "pgadmin3"
 
 onStartHook = setWMName "LG3D"
-              >> spawnOn "9" chat
               >> spawnOn "4" myTerminal
               >> spawnOn "3" emacs
               >> spawnOn "2" internet
               >> spawnOn "1" music
-              >> spawnHere "$HOME/xmonad-config/keymappings.sh"
+              >> spawnHere "$HOME/.xmonad/keymappings.sh"
 
 extraKeys =
   [ ("M-i", spawn internet)
@@ -46,6 +44,5 @@ extraKeys =
   , ("M-l", spawn lockScreen)
   , ("M-m", spawn music)
   , ("M-k", spawn keepass)
-  , ("M-c", spawn chat)
   , ("M-p-s", spawn postgresSqlClient)
   ]
