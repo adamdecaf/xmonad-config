@@ -35,6 +35,7 @@ onStartHook = setWMName "LG3D"
               >> spawnOn "2" internet
               >> spawnOn "1" music
               >> spawnHere "$HOME/.xmonad/keymappings.sh"
+              >> spawnHEre "dropbox start"
 
 extraKeys =
   [ ("M-i", spawn internet)
