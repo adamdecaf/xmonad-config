@@ -20,7 +20,7 @@ main = xmonad $ defaultConfig
 allWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 myTerminal = "gnome-terminal"
-internet = "chromium-browser"
+internet = "google-chrome"
 secondaryBrowser = "firefox"
 emacs = "emacs"
 goToSleep = ""
@@ -28,9 +28,11 @@ lockScreen = "gnome-screensaver-command -l"
 music = "spotify"
 keepass = "keepassx"
 chat = "xchat"
+network = "nm-connection-editor"
 
 onStartHook = setWMName "LG3D"
               >> spawnHere "gnome-settings-daemon"
+              >> spawnHere "dropbox start"
               >> spawnOn "5" music
               >> spawnOn "4" myTerminal
               >> spawnOn "3" emacs
@@ -45,4 +47,5 @@ extraKeys =
   , ("M-m", spawn music)
   , ("M-k", spawn keepass)
   , ("M-c", spawn chat)
+  , ("M-n", spawn network)
   ]
